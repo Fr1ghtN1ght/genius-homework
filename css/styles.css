@@ -15,6 +15,20 @@ ul {
   list-style-type: none;
 }
 
+/* Button */
+.button {
+    color: var(--color-primary-light);
+    border-radius: 8px;
+    border: 2px solid #819B57;
+    background-color: #819B57;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--color-brand-dark);
+}
+
 /* Links */
 .link {
   color: var(--color-primary-light);
