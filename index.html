@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <!-- Fonts -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
                         <li><a class="link" href="#contacts-section">Контакти</a></li>
                     </ul>
                 </nav>
-                <button class="button" type="button">Замовити дзвінок</button>
+                <button class="button modal-btn-open" type="button">Замовити дзвінок</button>
             </div>
         </div>
     </header>
@@ -76,7 +76,7 @@
         <section class="section" id="chefs-section">
             <div class="container">
                 <h2 class="chefs-title section-title centered">
-                    Наші найкращі <span class="accent">шеф-кухарі</span>
+                    Наші найкращі <br> <span class="accent">шеф-кухарі</span>
                 </h2>
                 <ul class="chefs-list">
                     <li class="chefs-item">
@@ -126,6 +126,7 @@
                     <ul class="formats-list">
                         <li class="formats-item">
                             <article class="format-card">
+                                <img class="format-image" src="./images/walrus-format.jpg" alt="Walrus format">
                                 <h3 class="format-title" lang="en">Walrus</h3>
                                 <div class="format-text">
                                     <p>Площа: до 120 м2</p>
@@ -139,6 +140,7 @@
                         </li>
                         <li class="formats-item">
                             <article class="format-card">
+                                <img class="format-image" src="./images/horseshoe-format.jpg" alt="Horseshoe format">
                                 <h3 class="format-title" lang="en">Horseshoe</h3>
                                 <div class="format-text">
                                     <p>Площа: до 25 м2</p>
@@ -150,6 +152,7 @@
                         </li>
                         <li class="formats-item">
                             <article class="format-card">
+                                <img class="format-image" src="./images/handlebar-format.jpg" alt="">
                                 <h3 class="format-title" lang="en">Handlebar</h3>
                                 <div class="format-text">
                                     <p>Площа: до 15 м2</p>
@@ -160,7 +163,7 @@
                             </article>
                         </li>
                     </ul>
-                    <button class="carousel-button" type="button">
+                    <button class="carousel-button next" type="button">
                         <svg width="16" height="16">
                             <use href="./images/icons.svg#icon-arrow"> </use>
                         </svg>
@@ -231,6 +234,20 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class="modal-btn-close" type="button">Close</button>
+            <h2>Замовити дзвінок</h2>
+            <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+            <form name="contact-form" autocomplete="off" novalidate>
+                <label for="user-name">Введіть ваше ім'я</label>
+                <input type="text" id="user-name" name="user-name">
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
